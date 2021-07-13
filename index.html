@@ -11,15 +11,12 @@ function getParam(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-var box_id = getParam('box-id')
+var box_id = getParam('box-id');
 if (box_id) {
-    console.log(box_id)
-} else {
-  console.log(document.referrer)
+    location.href="jeol-bank://BoxID=" + box_id;
 }
 </script>
 </head>
 <body>
-<h2>redirect</h2>
 </body>
 </html>
